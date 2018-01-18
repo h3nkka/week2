@@ -11,12 +11,20 @@ namespace ex5
         static void Main(string[] args)
         {
             int size;
+            int iteration = 0;
             Console.WriteLine("Input length of a tree to print as an integer");
             size = Int32.Parse(Console.ReadLine());
 
             Console.Write("*");
-            for (int p = size; p < 0; p--)
+            for (int p = 0; p < size; p++)
             {
+                Console.WriteLine("*");
+                for (int i = 0; i < iteration; i++)
+                {
+                    Console.Write("*");
+                    Console.Write("*");
+                }
+
                 for (int i = 0; i < size - 2; i++)
                 {
                     if (i < size - 3)
