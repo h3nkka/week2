@@ -10,7 +10,7 @@ namespace ex5
     {
         static void Main(string[] args)
         {
-            int size;
+            /*int size;
             int iteration = 0;
             Console.WriteLine("Input length of a tree to print as an integer");
             size = Int32.Parse(Console.ReadLine());
@@ -35,7 +35,44 @@ namespace ex5
                         Console.Write("*");
                     }
                 }
+            }*/
+
+            int size;            
+            int times = 0;
+            Console.WriteLine("Input length of a tree to print as an integer (higher than 2)");
+            size = Int32.Parse(Console.ReadLine());
+            int spaceMax = size - 3;
+
+            if (size > 2)
+            {
+                for (int i = 1; times < size-2; i += 2)
+                {
+                    WriteSpace(spaceMax-times);
+                    WriteStar(i);
+                    times++;
+                }
+                WriteSpace(spaceMax);
+                Console.Write("*");
+                WriteSpace(spaceMax);
+                Console.Write("*");
             }
+            else
+            {
+                Console.WriteLine("Invalid input! Integer must be higher than 2.");
+            }
+
+            Console.ReadKey(true);
+        }
+
+        static void WriteSpace(int amount)
+        {
+            Console.WriteLine();
+            Console.Write(new String(' ', amount));
+        }
+
+        static void WriteStar(int amount)
+        {
+            Console.Write(new String('*', amount));
         }
     }
 }

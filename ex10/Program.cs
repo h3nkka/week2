@@ -10,8 +10,7 @@ namespace ex10
     {
         static void Main(string[] args)
         {
-            throw new Exception("HAHAHA");
-            Console.ReadKey(true);
+            throw new Exception("HAHAHA"); //the surprise is an unhandled exception!
         }
     }
 }
